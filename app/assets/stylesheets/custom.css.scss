@@ -19,3 +19,10 @@ $navbar-default-bg: #073b15;
 .center{
 	text-align: center;
 }
+
+.jumbotron {
+  background-image: asset-url('food.jpeg');
+  background-size: cover;
+  height: 300px;
+  color: #fff;
+}
