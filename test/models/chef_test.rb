@@ -18,5 +18,14 @@ class ChefTest < ActiveSupport::TestCase
     @chef.chefname = "a" * 31
     assert_not @chef.valid?
   end
-  
+
+  test "email should be present" do
+    @chef.email = " "
+    assert_not @chef.valid?
+  end
+
+   test "email should not be too long" do
+    @chef.email = "a" * 245 + "@example.com"
+    assert_not @chef.valid?
+  end
 end
